@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.body-contacto nav div a:hover{
+    background-color: rgb(86, 79, 79);
+    box-shadow: 2px 4px 8px 1px black;
+    transform: scale(0.9);
+}
+
+.body-rutinas nav div a:hover{
+    background-color: rgb(86, 79, 79);
+    box-shadow: 2px 4px 8px 1px black;
+    transform: scale(0.9);
+}
+
+.body-contacto{
+    background-image: linear-gradient(orange,yellow);
+    height: 100vh;
+    
+}
+
+.main-contacto{
+    margin: 15px;
+}
+
+.formulario div{
+    background-color: rgb(210, 208, 208);
+    display: block;
+    padding: 15px;
+}
+
+.body-rutinas{
+    background-image: linear-gradient(orange,yellow);
+}
+
+.main-rutinas{
+    margin: 7px;
+}
+
+footer{
+    text-align: center;
+}
+
+.rutinas{
+    grid-area: rutinas;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.rutinasej{
+    grid-area: rutinasej;
+}.rutina-principiante{
+    grid-area: rutina-principiante;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+}
+.rutina-inicial{
+    grid-area: rutina-inicial;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+}
+.rutina-intermedio{
+    grid-area: rutina-intermedio;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+}
+.rutina-avanzado{
+    grid-area: rutina-avanzado;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+}
+.img-inicial{
+    grid-area: img-inicial;
+    margin-bottom: 50px;
+}
+.img-principiante{
+    grid-area: img-principiante;
+    margin-bottom: 50px;
+}.img-intermedio{
+    grid-area: img-intermedio;
+    margin-bottom: 50px;
+}.img-avanzado{
+    grid-area: img-avanzado;
+    margin-bottom: 50px;
+}
+
+.img-inicial:hover{
+    transform: scale(1.02,1.02);
+}
+.img-inicial:active{
+    transform: scale(1.5,1.5);
+}
+
+.img-principiante:hover{
+    transform: scale(1.02,1.02);
+}
+.img-principiante:active{
+    transform: scale(1.5,1.5);
+}
+
+.img-intermedio:hover{
+    transform: scale(1.02,1.02);
+}
+.img-intermedio:active{
+    transform: scale(1.5,1.5);
+}
+
+.img-avanzado:hover{
+    transform: scale(1.02,1.02);
+}
+.img-avanzado:active{
+    transform: scale(1.5,1.5);
+}
+
+
+
+.main-rutinas{
+    height: 320vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 0.02fr 0.02fr 0.2fr  0.02fr 0.2fr 0.02fr 0.2fr 0.02fr 0.2fr;
+    grid-template-areas: 
+    "rutinas"
+    "rutinasej"
+    "rutina-inicial"
+    "img-inicial"
+    "rutina-principiante"
+    "img-principiante"
+    "rutina-intermedio"
+    "img-intermedio"
+    "rutina-avanzado"
+    "img-avanzado"
+    ;
+
+}
+
+
+/*mediaqueries para ipad*/
+@media screen and (min-width: 600px){
+    .main-rutinas{
+        height: 150vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.01fr 0.02fr 0.02fr 0.2fr 0.02fr 0.2fr;
+        grid-template-areas: 
+        "rutinas rutinas"
+        "rutinasej rutinasej"
+        "rutina-inicial rutina-principiante"
+        "img-inicial img-principiante"
+        "rutina-intermedio rutina-avanzado"
+        "img-intermedio img-avanzado"
+        ;
+        justify-items: center;
+    }
+
+    .img-inicial{
+        width: 370px;
+        height: 570px;
+    }
+    .img-principiante{
+        width: 370px;
+        height: 570px;
+    }.img-intermedio{
+        width: 370px;
+        height: 570px;
+    }.img-avanzado{
+        width: 370px;
+        height: 570px;
+    }
+}
+
+
+/*mediaqueries para compu*/
+@media screen and (min-width:1024px){
+    .main-rutinas{
+        height: 150vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.01fr 0.02fr 0.02fr 0.2fr ;
+        grid-template-areas: 
+        "rutinas rutinas rutinas rutinas"
+        "rutinasej rutinasej rutinasej rutinasej"
+        "rutina-inicial rutina-principiante rutina-intermedio rutina-avanzado"
+        "img-inicial img-principiante img-intermedio img-avanzado";
+        justify-items: center;
+    }
+
+        .img-inicial{
+            width: 320px;
+            height: 520px;
+        }
+        .img-principiante{
+            width: 320px;
+            height: 520px;
+        }.img-intermedio{
+            width: 320px;
+            height: 520px;
+        }.img-avanzado{
+            width: 320px;
+            height: 520px;
+        }
+
+        .rutinasej{
+            margin-top: 7px;
+            margin-bottom: 30px;
+        }
+        
+    }
+    
+
+
+/*@media screen and (min-width: 600px){
+ 
+    .main-index{
+        grid-template-areas:
+        "main-p main-p main-p main-p"
+        "imagen-uno imagen-dos" 
+        "imagen-tres imagen-cuatro"
+        "parrafo parrafo parrafo parrafo";
+        column-gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+ 
+    
+ 
+    header h1{
+        font-size: 4rem;
+    }
+ 
+    header nav ul{
+        font-size: 2rem;
+    }
+    .main-p{
+        font-size: 1.5rem;
+    }
+}
+ */
